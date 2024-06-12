@@ -1,0 +1,36 @@
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\bin\Debug\net6.0\Backend.deps.json
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\bin\Debug\net6.0\Backend.dll
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\bin\Debug\net6.0\Backend.pdb
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.AssemblyInfoInputs.cache
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.AssemblyInfo.cs
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.csproj.CoreCompileInputs.cache
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.sourcelink.json
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.dll
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\refint\Backend.dll
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.pdb
+C:\Users\ID140\Desktop\Tokhna_Task\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\ref\Backend.dll
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\bin\Debug\net6.0\Backend.deps.json
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\bin\Debug\net6.0\Backend.dll
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\bin\Debug\net6.0\Backend.pdb
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.AssemblyInfoInputs.cache
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.AssemblyInfo.cs
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.csproj.CoreCompileInputs.cache
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.sourcelink.json
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.dll
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\refint\Backend.dll
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.pdb
+C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\ref\Backend.dll
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\bin\Debug\net6.0\Backend.deps.json
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\bin\Debug\net6.0\Backend.dll
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\bin\Debug\net6.0\Backend.pdb
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.AssemblyInfoInputs.cache
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.AssemblyInfo.cs
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.csproj.CoreCompileInputs.cache
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.sourcelink.json
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.dll
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\refint\Backend.dll
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\Backend.pdb
+C:\Users\IMOE001\Desktop\‏‏תיקיה חדשה\assignment1\KanbanApp\Kanban_BackEnd\obj\Debug\net6.0\ref\Backend.dll
