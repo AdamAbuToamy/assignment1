@@ -31,7 +31,7 @@ namespace Kanban_BackEnd.BusinessLayer
                 email = value;
             }
         }
-
+       
         public string Username
         {
             get => username;
@@ -42,7 +42,7 @@ namespace Kanban_BackEnd.BusinessLayer
             }
         }
 
-        public string Password
+        internal string Password
         {
             get => password;
             set

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kanban_BackEnd.ServiceLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,19 +11,22 @@ namespace Kanban_BackEnd.BusinessLayer
     {
         private readonly Dictionary<string, UserBL> _users = new Dictionary<string, UserBL>();
 
-        internal UserBL Signin(string username,string password)
+        internal UserBL signin(string email,string password)
         {
-            return null;
+            if (_users.ContainsKey(email) && _users[email].Password == password) 
+            {
+                _users[email].LoggedIn = true;
+                return _users[email];
+            }
+            throw new Exception("Wrong credentials!");
+
         }
         internal void ChangePassword(string username,string oldPassword,string newPassword)
         {
             
         } 
-        internal bool IsLoggedIn(string username)
-        {
-            return false;
-        }
-
+     
+        
         public void signup(string username, string email, string password)
         {
             if (_users.ContainsKey(email))

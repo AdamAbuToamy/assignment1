@@ -84,8 +84,8 @@ namespace BackendTests
                 passed--;
             }
 
-            if (passed == 0) Console.WriteLine("All tests passed");
-            Console.WriteLine("\n---------------------\n");
+            if (passed == 0) Console.WriteLine("All tests passed\n");
+           
 
         }
     }
