@@ -8,7 +8,7 @@ using Microsoft.VisualBasic;
 
 namespace Kanban_BackEnd.ServiceLayer
 {
-    internal class TaskService
+    public class TaskService
     {
         private TaskFacade tf;
 
@@ -20,7 +20,7 @@ namespace Kanban_BackEnd.ServiceLayer
         {
             return null;
         }
-        public string CreateTask(string title,DateTime dueDate,string description)
+        public string CreateTask(string title,DateTime dueDate,string description, string boardname)
         {
             return null;
         }
