@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Kanban_BackEnd.BusinessLayer;
 using Microsoft.VisualBasic;
 
 namespace Kanban_BackEnd.ServiceLayer
 {
-    internal class TaskService
+    public class TaskService
     {
         private TaskFacade tf;
-
+        public TaskService()
+        {
+            tf = new TaskFacade();
+        }
         public string EditTask (long id,string title,DateTime due_time,string description)
         {
             return null;
@@ -20,9 +24,21 @@ namespace Kanban_BackEnd.ServiceLayer
         {
             return null;
         }
-        public string CreateTask(string title,DateTime dueDate,string description)
+        public string CreateTask(string title,DateTime dueDate,string description, string boardname)
         {
-            return null;
+            
+            Response response=new Response();
+            try
+            {
+                tf.CreateTask(title, dueDate, description, boardname);
+                return JsonSerializer.Serialize(response);
+            }
+            catch (Exception e)
+            {
+                response = new Response(e.Message);
+                return JsonSerializer.Serialize(response);
+            }
+
         }
         public string list_inprogress(string username)
         {

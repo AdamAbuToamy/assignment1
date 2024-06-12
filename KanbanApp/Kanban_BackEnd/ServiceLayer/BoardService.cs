@@ -7,7 +7,7 @@ using Kanban_BackEnd.BusinessLayer;
 
 namespace Kanban_BackEnd.ServiceLayer
 {
-    internal class BoardService
+    public class BoardService
     {
         private TaskFacade tf;
 
