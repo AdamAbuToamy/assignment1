@@ -16,9 +16,19 @@ namespace Kanban_BackEnd.ServiceLayer
             this.uf = new UserFacade();
         }
 
-        public string signin(string username,string password)
+        public string signin(string email,string password)
         {
-            return null;
+            Response response = new Response();
+            try
+            {
+                uf.signin(email, password);
+                return JsonSerializer.Serialize(response);
+            }
+            catch (Exception ex)
+            {
+                response = new Response(ex.Message);
+                return JsonSerializer.Serialize(response);
+            }
         }
         public string changePassword(string username , string oldPassword , string newPassword )
         {

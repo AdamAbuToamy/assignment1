@@ -7,8 +7,12 @@ namespace BackendTests
         static void Main(string[] args)
         {
             UserService us = new UserService();
-            UserSignUp_Test test = new UserSignUp_Test(us);
-            test.runTests();
+
+            UserSignUp_Test test1 = new UserSignUp_Test(us);
+            test1.runTests();
+
+            SignIn_Test test2 = new SignIn_Test(us);
+            test2.runTests();
         }
     }
 }
