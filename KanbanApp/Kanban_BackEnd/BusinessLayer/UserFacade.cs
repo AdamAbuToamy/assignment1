@@ -21,8 +21,16 @@ namespace Kanban_BackEnd.BusinessLayer
             throw new Exception("Wrong credentials!");
 
         }
-        internal void ChangePassword(string username,string oldPassword,string newPassword)
+        internal void ChangePassword(string email,string oldPassword,string newPassword)
         {
+            if (_users.ContainsKey(email) && _users[email].Password == oldPassword )
+            {
+                _users[email].Password = newPassword;
+            }
+            else
+            {
+                throw new Exception(" You entered something wrong ");
+            }
             
         } 
      
