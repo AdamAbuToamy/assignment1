@@ -27,7 +27,7 @@ namespace Kanban_BackEnd.BusinessLayer
         } 
      
         
-        public void signup(string username, string email, string password)
+        public UserBL signup(string username, string email, string password)
         {
             if (_users.ContainsKey(email))
             {
@@ -35,6 +35,7 @@ namespace Kanban_BackEnd.BusinessLayer
             }
             UserBL user = new UserBL(username, email, password);
             _users.Add(email, user);
+            return user;
         }
     }
 }
