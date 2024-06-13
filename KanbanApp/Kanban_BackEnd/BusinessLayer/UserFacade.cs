@@ -21,13 +21,21 @@ namespace Kanban_BackEnd.BusinessLayer
             throw new Exception("Wrong credentials!");
 
         }
-        internal void ChangePassword(string username,string oldPassword,string newPassword)
+        internal void ChangePassword(string email,string oldPassword,string newPassword)
         {
+            if (_users.ContainsKey(email) && _users[email].Password == oldPassword )
+            {
+                _users[email].Password = newPassword;
+            }
+            else
+            {
+                throw new Exception(" You entered something wrong ");
+            }
             
         } 
      
         
-        public void signup(string username, string email, string password)
+        public UserBL signup(string username, string email, string password)
         {
             if (_users.ContainsKey(email))
             {
@@ -35,6 +43,7 @@ namespace Kanban_BackEnd.BusinessLayer
             }
             UserBL user = new UserBL(username, email, password);
             _users.Add(email, user);
+            return user;
         }
     }
 }

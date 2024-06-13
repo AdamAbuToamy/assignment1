@@ -30,9 +30,19 @@ namespace Kanban_BackEnd.ServiceLayer
                 return JsonSerializer.Serialize(response);
             }
         }
-        public string changePassword(string username , string oldPassword , string newPassword )
+        public string changePassword(string email , string oldPassword , string newPassword )
         {
-            return null;
+            Response response = new Response();
+            try
+            {
+                uf.ChangePassword(email, oldPassword,newPassword);
+                return JsonSerializer.Serialize(response);
+            }
+            catch (Exception ex)
+            {
+                response = new Response(ex.Message);
+                return JsonSerializer.Serialize(response);
+            }
         }
         public string signup(string username, string email, string Password)
         {
