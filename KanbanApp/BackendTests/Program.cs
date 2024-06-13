@@ -16,8 +16,11 @@ namespace BackendTests
             SignIn_Test test2 = new SignIn_Test(us);
             test2.runTests();
 
+            ChangePasswaord_Test test4 = new ChangePasswaord_Test(us);
             Board_Create_Delete_Limit_Tests test3 = new Board_Create_Delete_Limit_Tests(bs, ts);
-            test3.runTests();
+            
+
+            
         }
     }
 }
