@@ -18,7 +18,7 @@ namespace BackendTests
         public void runTests()
         {
             int passed = 0;
-            Console.WriteLine("-----SignUp Tests----\n");
+            Console.WriteLine("----- User SignUp Tests----\n");
 
             //-------------valid signup test-----------------
             Response response = JsonSerializer.Deserialize<Response>(userService.signup("adam abu toamy", "abutoamy@post.bgu.ac.il", "Adam123"));
