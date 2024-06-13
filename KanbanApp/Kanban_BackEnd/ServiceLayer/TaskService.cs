@@ -18,7 +18,17 @@ namespace Kanban_BackEnd.ServiceLayer
         }
         public string EditTask (long id,string title,DateTime due_time,string description)
         {
-            return null;
+            Response response = new Response();
+            try
+            {
+                tf.EditTask(id,title, due_time, description);
+                return JsonSerializer.Serialize(response);
+            }
+            catch (Exception e)
+            {
+                response = new Response(e.Message);
+                return JsonSerializer.Serialize(response);
+            }
         }
         public string UpdateTaskStatus(long id)
         {
