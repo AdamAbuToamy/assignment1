@@ -27,11 +27,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\ID140\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\hosh8\\.nuget\\packages\\": {}
+>>>>>>> e480ae21447df58cc6f2f0957f28219227febd53
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\BackendTests\\BackendTests.csproj",
       "projectName": "BackendTests",
       "projectPath": "C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\BackendTests\\BackendTests.csproj",
@@ -40,20 +45,40 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ID140\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\BackendTests\\BackendTests.csproj",
+      "projectName": "BackendTests",
+      "projectPath": "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\BackendTests\\BackendTests.csproj",
+      "packagesPath": "C:\\Users\\hosh8\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\BackendTests\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\hosh8\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> e480ae21447df58cc6f2f0957f28219227febd53
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+<<<<<<< HEAD
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+=======
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+>>>>>>> e480ae21447df58cc6f2f0957f28219227febd53
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj": {
               "projectPath": "C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj"
+=======
+            "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj": {
+              "projectPath": "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj"
+>>>>>>> e480ae21447df58cc6f2f0957f28219227febd53
             }
           }
         }
@@ -88,7 +113,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+>>>>>>> e480ae21447df58cc6f2f0957f28219227febd53
       }
     }
   }

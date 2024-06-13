@@ -8,6 +8,10 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Backend
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\ID140\Desktop\Kanban\assignment1\KanbanApp\Kanban_BackEnd\
+=======
+build_property.ProjectDir = C:\Users\hosh8\Desktop\KanbanApp_m\assignment1\KanbanApp\Kanban_BackEnd\
+>>>>>>> e480ae21447df58cc6f2f0957f28219227febd53
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
