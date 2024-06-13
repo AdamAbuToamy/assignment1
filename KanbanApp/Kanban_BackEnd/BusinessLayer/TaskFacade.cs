@@ -15,7 +15,7 @@ namespace Kanban_BackEnd.BusinessLayer
         
         private long _currentTaskId=0;
         private readonly Dictionary<string, BoardBL> _boards = new Dictionary<string, BoardBL>();
-
+        private readonly Dictionary<long, TaskBL> _alltasks = new Dictionary<long, TaskBL>();
         internal void deleteBoard(string boardName)
         {
             if (_boards.ContainsKey(boardName))
@@ -59,7 +59,26 @@ namespace Kanban_BackEnd.BusinessLayer
 
         internal TaskBL EditTask(long id, string title, DateTime dueTime, string description)
         {
-            return null;
+            if(id<0)
+            {
+                throw new Exception("id is undefined!!");
+            }
+            TaskBL toBeEdited = _alltasks[id];
+            if (toBeEdited._status == "done")
+            {
+                throw new Exception($"Task that done can't be changed!!");
+            }
+            else if ((title.Length > 0 && title.Length <= 50) && description.Length <= 300)
+            {
+                toBeEdited._title = title;
+                toBeEdited._description = description;
+                toBeEdited._dueDate = dueTime;
+                return toBeEdited;
+            }
+            else
+            {
+                throw new Exception($"title should be maximum 50 characters, not empty,and description should be maximum 300 characters!!");
+            }
         }
         internal void UpdateTaskStatus(long id)
         {
@@ -73,8 +92,9 @@ namespace Kanban_BackEnd.BusinessLayer
                 if ((title.Length>0 && title.Length <= 50) && description.Length <= 300)
                 {
                     TaskBL task = new TaskBL(title, description, dueDate, _currentTaskId);
-                    _currentTaskId ++;
+                    _alltasks.Add(_currentTaskId, task);
                     _boards[boardname].backlog.Add(task);
+                    _currentTaskId++;
                     return task;
                 }
                 else

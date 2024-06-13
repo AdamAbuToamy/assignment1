@@ -28,7 +28,8 @@ namespace BackendTests
             Board_Create_Delete_Limit_Tests test5 = new Board_Create_Delete_Limit_Tests(bs, ts);
             test5.runTests();
 
-
+            EditTask_Test test6 = new EditTask_Test(ts);
+            test6.runTests();
 
         }
     }
