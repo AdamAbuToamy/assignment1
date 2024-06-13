@@ -25,35 +25,37 @@ namespace BackendTests
 
             //-------------valid createTask test------------------
 
-            //boardService.createBoard("assignments");
-            //Response response = JsonSerializer.Deserialize<Response>(taskService.CreateTask("solve assignment1",new DateTime(2024,6,1,13,50,30),"do assignment before sunday","assignments"));
-            //if (response.ErrorMessage != null)
-            //{
-            //    Console.WriteLine("Valid task data test Failed:" + response.ErrorMessage);
-            //    passed--;
-            //}
+
+            boardService.createBoard("assignments");
+
+            Response response = JsonSerializer.Deserialize<Response>(taskService.CreateTask("solve assignment1", new DateTime(2024, 6, 1, 13, 50, 30), "do assignment before sunday", "assignments"));
+            if (response.ErrorMessage != null)
+            {
+                Console.WriteLine("Valid task data test Failed:" + response.ErrorMessage);
+                passed--;
+            }
 
 
             //-------------WrongData createTask test-----------------
 
-            
-            //Response response = JsonSerializer.Deserialize<Response>(taskService.CreateTask("solve assignment1", new DateTime(2024, 6, 1, 13, 50, 30), "do assignment before sunday", "assignments"));
-            //if (response.ErrorMessage == null)
-            //{
-            //    Console.WriteLine("WrongData test Failed:" + response.ErrorMessage);
-            //    passed--;
-            //}
+
+            response = JsonSerializer.Deserialize<Response>(taskService.CreateTask("", new DateTime(2024, 6, 1, 13, 50, 30), "do assignment before sunday", "assignments"));
+            if (response.ErrorMessage == null)
+            {
+                Console.WriteLine("WrongData test Failed:" + response.ErrorMessage);
+                passed--;
+            }
 
             //-------------fullBoardError createTask test-----------------
 
-            
-            //boardService.LimitColumn("assignments", "backlog", 0);
-            //response = JsonSerializer.Deserialize<Response>(taskService.CreateTask("solve assignment1", new DateTime(2024, 6, 1, 13, 50, 30), "do assignment before sunday", "assignments"));
-            //if (response.ErrorMessage == null)
-            //{
-            //    Console.WriteLine("WrongData test Failed:" + response.ErrorMessage);
-            //    passed--;
-            //}
+
+            boardService.LimitColumn("assignments", "backlog", 0);
+            response = JsonSerializer.Deserialize<Response>(taskService.CreateTask("solve assignment1", new DateTime(2024, 6, 1, 13, 50, 30), "do assignment before sunday", "assignments11"));
+            if (response.ErrorMessage == null)
+            {
+                Console.WriteLine("WrongData test Failed:" + response.ErrorMessage);
+                passed--;
+            }
 
 
 

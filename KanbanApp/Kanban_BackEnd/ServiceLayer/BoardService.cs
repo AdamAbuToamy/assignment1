@@ -13,6 +13,8 @@ namespace Kanban_BackEnd.ServiceLayer
     {
         private TaskFacade tf;
 
+        internal TaskFacade gettf() { return tf; }
+
         public BoardService()
         {
             tf = new TaskFacade();

@@ -12,9 +12,9 @@ namespace Kanban_BackEnd.ServiceLayer
     public class TaskService
     {
         private TaskFacade tf;
-        public TaskService()
+        public TaskService(BoardService bs)
         {
-            tf = new TaskFacade();
+            this.tf = bs.gettf();
         }
         public string EditTask (long id,string title,DateTime due_time,string description)
         {

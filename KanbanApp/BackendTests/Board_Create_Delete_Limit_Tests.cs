@@ -94,16 +94,16 @@ namespace BackendTests
             }
 
             //-------------limit smaller than tasks on column test-----------------
-            //DateTime time = new DateTime(2024, 6, 12, 14, 30, 0);
-            //taskservice.CreateTask("one", time, "bs esm3 mnni", "FriendsBoard");
-            //taskservice.CreateTask("one", time, "bs esm3 mnni", "FriendsBoard");
-            //taskservice.CreateTask("one", time, "bs esm3 mnni", "FriendsBoard");
-            //response = JsonSerializer.Deserialize<Response>(boardservice.LimitColumn("FriendsBoard", "done", 2));
-            //if (response.ErrorMessage == null)
-            //{
-            //    Console.WriteLine("Limit smaller than tasks on column test Failed");
-            //    passed--;
-            //}
+            DateTime time = new DateTime(2024, 6, 12, 14, 30, 0);
+            taskservice.CreateTask("one", time, "bs esm3 mnni", "FriendsBoard");
+            taskservice.CreateTask("two", time, "bs esm3 mnni", "FriendsBoard");
+            taskservice.CreateTask("three", time, "bs esm3 mnni", "FriendsBoard");
+            response = JsonSerializer.Deserialize<Response>(boardservice.LimitColumn("FriendsBoard", "backlog", 1));
+            if (response.ErrorMessage == null)
+            {
+                Console.WriteLine("Limit smaller than tasks on column test Failed");
+                passed--;
+            }
 
             if (passed == 0) Console.WriteLine("All tests passed\n");
 

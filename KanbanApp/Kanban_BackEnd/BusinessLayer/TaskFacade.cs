@@ -14,10 +14,7 @@ namespace Kanban_BackEnd.BusinessLayer
 
         
         private long _currentTaskId=0;
-        
-
         private readonly Dictionary<string, BoardBL> _boards = new Dictionary<string, BoardBL>();
-
 
         internal void deleteBoard(string boardName)
         {
@@ -28,6 +25,8 @@ namespace Kanban_BackEnd.BusinessLayer
             }
             else throw new KeyNotFoundException($"A board with name {boardName} is not existed!");
         }
+
+
         internal void LimitColumn(string boardName, string column, int Limit)
         {
             if (column == "backlog")
@@ -56,6 +55,8 @@ namespace Kanban_BackEnd.BusinessLayer
             }
             else throw new Exception($"No column named: {column}");
         }
+
+
         internal TaskBL EditTask(long id, string title, DateTime dueTime, string description)
         {
             return null;
@@ -66,13 +67,15 @@ namespace Kanban_BackEnd.BusinessLayer
         }
         internal TaskBL CreateTask(string title,DateTime dueDate,string description,string boardname)
         {
-            if (_boards[boardname] == null || _boards[boardname].backlog.Count < _boards[boardname].backlogLimit) 
+
+            if (_boards[boardname].backlogLimit == null || _boards[boardname].backlog.Count < _boards[boardname].backlogLimit) 
             {
-                if ((title.Length>0 & title.Length <= 50) && description.Length <= 300)
+                if ((title.Length>0 && title.Length <= 50) && description.Length <= 300)
                 {
-                    TaskBL taskbl = new TaskBL(title, description, dueDate, _currentTaskId++);
-                    _boards[boardname].backlog.Add(taskbl);
-                    return taskbl;
+                    TaskBL task = new TaskBL(title, description, dueDate, _currentTaskId);
+                    _currentTaskId ++;
+                    _boards[boardname].backlog.Add(task);
+                    return task;
                 }
                 else
                 {
@@ -86,6 +89,7 @@ namespace Kanban_BackEnd.BusinessLayer
             }
             
         }
+
         internal BoardBL createBoard(string boardname)
         {
             if (_boards.ContainsKey(boardname))
