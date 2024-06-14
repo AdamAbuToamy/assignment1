@@ -13,9 +13,8 @@ namespace Kanban_BackEnd.BusinessLayer
     {
 
         
-        private long _currentTaskId=0;
+        private long _currentTaskId=1;
         private readonly Dictionary<string, BoardBL> _boards = new Dictionary<string, BoardBL>();
-        private readonly Dictionary<long, TaskBL> _alltasks = new Dictionary<long, TaskBL>();
         internal void deleteBoard(string boardName)
         {
             if (_boards.ContainsKey(boardName))
@@ -57,27 +56,27 @@ namespace Kanban_BackEnd.BusinessLayer
         }
 
 
-        internal TaskBL EditTask(long id, string title, DateTime dueTime, string description)
+        internal TaskBL EditTask(long id, string title, DateTime dueTime, string description, string boardname)
         {
             if(id<0)
             {
                 throw new Exception("id is undefined!!");
             }
-            TaskBL toBeEdited = _alltasks[id];
-            if (toBeEdited._status == "done")
+
+            TaskBL task;
+            if (_boards[boardname].backlog.ContainsKey(id)) task = _boards[boardname].backlog[id];
+            else if (_boards[boardname].inprogress.ContainsKey(id)) task = _boards[boardname].inprogress[id];
+            else if (_boards[boardname].done.ContainsKey(id)) task = _boards[boardname].done[id];
+            else throw new Exception($"no task with this id: {id}");
+
+            if (task._status == "done")
             {
                 throw new Exception($"Task that done can't be changed!!");
             }
-            else if ((title.Length > 0 && title.Length <= 50) && description.Length <= 300)
+            else 
             {
-                toBeEdited._title = title;
-                toBeEdited._description = description;
-                toBeEdited._dueDate = dueTime;
-                return toBeEdited;
-            }
-            else
-            {
-                throw new Exception($"title should be maximum 50 characters, not empty,and description should be maximum 300 characters!!");
+                task = new TaskBL(title,description,dueTime,id);
+                return task;
             }
         }
         internal void UpdateTaskStatus(long id)
@@ -89,23 +88,14 @@ namespace Kanban_BackEnd.BusinessLayer
 
             if (_boards[boardname].backlogLimit == null || _boards[boardname].backlog.Count < _boards[boardname].backlogLimit) 
             {
-                if ((title.Length>0 && title.Length <= 50) && description.Length <= 300)
-                {
                     TaskBL task = new TaskBL(title, description, dueDate, _currentTaskId);
-                    _alltasks.Add(_currentTaskId, task);
-                    _boards[boardname].backlog.Add(task);
+                    _boards[boardname].backlog.Add(_currentTaskId,task);
                     _currentTaskId++;
                     return task;
-                }
-                else
-                {
-                    throw new Exception($"title should be maximum 50 characters, not empty,and description should be maximum 300 characters!!");
-                }
-               
             }
             else
             {
-                throw new Exception($"board is full!! cant add task!");
+                throw new Exception($"backlog limit is full!! cant add task!");
             }
             
         }

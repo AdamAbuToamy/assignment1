@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj": {}
+    "C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj": {
+    "C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj",
-        "packagesPath": "C:\\Users\\hosh8\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\Kanban_BackEnd\\obj\\",
+        "projectPath": "C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\Kanban_BackEnd\\Backend.csproj",
+        "packagesPath": "C:\\Users\\ID140\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\Kanban_BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hosh8\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ID140\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "net6.0": {
@@ -60,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

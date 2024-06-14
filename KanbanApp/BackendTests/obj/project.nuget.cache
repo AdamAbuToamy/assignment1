@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "RbNJjPfFP7d1S1FwMh5OcfU3StXXkg8TSS6npMIu1724SEM0S1z4qi+OdDSFGnqr5iXHHpzGK0rYrWG9WnUizw==",
+  "dgSpecHash": "uBqV6ji6b5c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hosh8\\Desktop\\KanbanApp_m\\assignment1\\KanbanApp\\BackendTests\\BackendTests.csproj",
+  "projectFilePath": "C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\BackendTests\\BackendTests.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\ID140\\Desktop\\Kanban\\assignment1\\KanbanApp\\BackendTests\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

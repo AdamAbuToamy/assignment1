@@ -20,20 +20,23 @@ namespace Kanban_BackEnd.BusinessLayer
         public TaskBL(string title,string description,DateTime dueDate,long id)
         {
             createTime = DateTime.Now;
-            this.title = title;
-            this.description = description;
-            this.status = "backlog";
-            this.dueDate = dueDate;
-            this.id = id;
+            this._title = title;
+            this._description = description;
+            this._status = "backlog";
+            this._dueDate = dueDate;
+            this._id = id;
         }
-        public long getId() { return id; }
+
+        public long _id { get;}
         public string _title
         {
             get => title;
             set 
             {
                 if(value == null)throw new ArgumentNullException("value");
-                title = value;
+                if (value.Length > 0 && value.Length <= 50) title = value;
+                else throw new Exception($"title should be maximum 50 characters and not null!");
+
             }
         }
         public DateTime _dueDate
@@ -50,8 +53,10 @@ namespace Kanban_BackEnd.BusinessLayer
             get => description;
             set
             {
+               
                 if (value == null) throw new ArgumentNullException("value");
-                description = value;
+                if (value.Length <= 300) description = value;
+                else throw new Exception("description should be maximum 300 characters!!");
             }
         }
         public string _status

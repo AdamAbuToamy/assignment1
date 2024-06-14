@@ -25,7 +25,7 @@ namespace BackendTests
 
             //-------------valid EditTask test------------------
 
-            Response response = JsonSerializer.Deserialize<Response>(taskService.EditTask(1,"gym day1",new DateTime(2024,7,5,12,0,0),"camoon!"));
+            Response response = JsonSerializer.Deserialize<Response>(taskService.EditTask(1,"gym day1",new DateTime(2024,7,5,12,0,0),"camoon!", "assignments"));
             if (response.ErrorMessage != null)
             {
                 Console.WriteLine("Valid task data test Failed:" + response.ErrorMessage);
@@ -36,7 +36,7 @@ namespace BackendTests
             //-------------WrongData EditTask test(wrong id)-----------------
 
 
-            response = JsonSerializer.Deserialize<Response>(taskService.EditTask(-1,"gym day2", new DateTime(2024, 7, 5, 12, 0, 0), ""));
+            response = JsonSerializer.Deserialize<Response>(taskService.EditTask(-1,"gym day2", new DateTime(2024, 7, 5, 12, 0, 0), "", "assignments"));
             if (response.ErrorMessage == null)
             {
                 Console.WriteLine("WrongData test Failed:" + response.ErrorMessage);
@@ -47,7 +47,7 @@ namespace BackendTests
 
 
             
-            response = JsonSerializer.Deserialize<Response>(taskService.EditTask(142,"", new DateTime(2024, 7, 5, 12, 0, 0), ""));
+            response = JsonSerializer.Deserialize<Response>(taskService.EditTask(1,"", new DateTime(2024, 7, 5, 12, 0, 0), "", "assignments"));
             if (response.ErrorMessage == null)
             {
                 Console.WriteLine("WrongData test Failed:" + response.ErrorMessage);
