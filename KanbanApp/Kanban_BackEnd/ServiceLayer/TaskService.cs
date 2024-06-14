@@ -30,9 +30,19 @@ namespace Kanban_BackEnd.ServiceLayer
                 return JsonSerializer.Serialize(response);
             }
         }
-        public string UpdateTaskStatus(long id)
+        public string UpdateTaskStatus(long id, string boardname)
         {
-            return null;
+            Response response = new Response();
+            try
+            {
+                tf.UpdateTaskStatus(id, boardname);
+                return JsonSerializer.Serialize(response);
+            }
+            catch (Exception e)
+            {
+                response = new Response(e.Message);
+                return JsonSerializer.Serialize(response);
+            }
         }
         public string CreateTask(string title,DateTime dueDate,string description, string boardname)
         {
@@ -50,9 +60,21 @@ namespace Kanban_BackEnd.ServiceLayer
             }
 
         }
-        public string list_inprogress(string username)
+        public string list_inprogress()
         {
-            return null;
+            Response response = new Response();
+            try
+            {
+                JsonSerializerOptions options = new JsonSerializerOptions{ WriteIndented = true};
+
+                response = new Response(null, JsonSerializer.Serialize(tf.List_inprogress(), options));
+                return JsonSerializer.Serialize(response);
+            }
+            catch (Exception e)
+            {
+                response = new Response(e.Message);
+                return JsonSerializer.Serialize(response);
+            }
         }
     }
 }

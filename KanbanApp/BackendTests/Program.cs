@@ -31,6 +31,12 @@ namespace BackendTests
             EditTask_Test test6 = new EditTask_Test(ts);
             test6.runTests();
 
+            list_inprogress_test test7 = new list_inprogress_test(ts, bs);
+            test7.runTests();
+
+            updateTaskStatus_test test8 = new updateTaskStatus_test(ts);
+            test8.runTests();
+
         }
     }
 }
