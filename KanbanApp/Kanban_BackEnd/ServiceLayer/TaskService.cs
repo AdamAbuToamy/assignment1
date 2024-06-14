@@ -16,12 +16,12 @@ namespace Kanban_BackEnd.ServiceLayer
         {
             this.tf = bs.gettf();
         }
-        public string EditTask (long id,string title,DateTime due_time,string description)
+        public string EditTask (long id,string title,DateTime due_time,string description, string boardname)
         {
             Response response = new Response();
             try
             {
-                tf.EditTask(id,title, due_time, description);
+                tf.EditTask(id,title, due_time, description, boardname);
                 return JsonSerializer.Serialize(response);
             }
             catch (Exception e)

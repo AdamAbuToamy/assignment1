@@ -9,9 +9,9 @@ namespace Kanban_BackEnd.BusinessLayer
     internal class BoardBL
     {
         private string name;
-        internal readonly List<TaskBL> backlog;
-        internal readonly List<TaskBL> inprogress;
-        internal readonly List<TaskBL> done;
+        internal readonly Dictionary<long, TaskBL> backlog;
+        internal readonly Dictionary<long, TaskBL> inprogress;
+        internal readonly Dictionary<long, TaskBL> done;
         internal int? backlogLimit;
         internal int? inprogressLimit;
         internal int? doneLimit;
@@ -19,9 +19,9 @@ namespace Kanban_BackEnd.BusinessLayer
         public BoardBL(string name) 
         {
             this.Name = name;
-            done = new List<TaskBL>();
-            inprogress = new List<TaskBL>();
-            backlog = new List<TaskBL>();
+            done = new Dictionary<long, TaskBL>();
+            inprogress = new Dictionary<long, TaskBL> ();
+            backlog = new Dictionary<long, TaskBL>();
         }    
         public string Name
         {
