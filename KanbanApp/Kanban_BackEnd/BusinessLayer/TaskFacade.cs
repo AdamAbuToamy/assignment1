@@ -79,10 +79,30 @@ namespace Kanban_BackEnd.BusinessLayer
                 return task;
             }
         }
-        internal void UpdateTaskStatus(long id)
+        internal void UpdateTaskStatus(long id, string boardname)
         {
-            ;
+            if (_boards[boardname].done.ContainsKey(id)) 
+            {
+                throw new Exception("this task is done!");
+            }
+            else if (_boards[boardname].backlog.ContainsKey(id))
+            {
+                
+                _boards[boardname].inprogress.Add(id, _boards[boardname].backlog[id]);
+                _boards[boardname].backlog.Remove(id);
+                
+                _boards[boardname].inprogress[id]._status = "inprogress";
+            }
+            else if (_boards[boardname].inprogress.ContainsKey(id))
+            {
+                _boards[boardname].done.Add(id, _boards[boardname].inprogress[id]);
+                _boards[boardname].inprogress.Remove(id);
+
+                _boards[boardname].done[id]._status = "done";
+            }
+            else throw new Exception("no task with this id!");
         }
+
         internal TaskBL CreateTask(string title,DateTime dueDate,string description,string boardname)
         {
 
@@ -110,9 +130,19 @@ namespace Kanban_BackEnd.BusinessLayer
             _boards.Add(boardname, board);
             return board;
         }
-        internal List<TaskBL> List_inprogress(long id)
+        internal List<TaskBL> List_inprogress()
         {
-            return null;
+            List <TaskBL> returnList = new List<TaskBL>();
+
+            foreach (KeyValuePair<string, BoardBL> board in _boards)
+            {
+                foreach (KeyValuePair<long, TaskBL> task in board.Value.inprogress) 
+                {
+                    returnList.Add(task.Value);
+                }
+            }
+
+            return returnList;
         }
 
 
