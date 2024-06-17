@@ -67,7 +67,7 @@ namespace Kanban_BackEnd.ServiceLayer
             {
                 JsonSerializerOptions options = new JsonSerializerOptions{ WriteIndented = true};
 
-                response = new Response(null, JsonSerializer.Serialize(tf.List_inprogress(), options));
+                response = new Response(JsonSerializer.Serialize(tf.List_inprogress(), options));
                 return JsonSerializer.Serialize(response);
             }
             catch (Exception e)

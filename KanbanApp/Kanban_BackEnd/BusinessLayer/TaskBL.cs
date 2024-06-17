@@ -10,11 +10,11 @@ namespace Kanban_BackEnd.BusinessLayer
     internal class TaskBL
     {
         readonly private long id;//we dont want that id can be changed.
-        private string title;
+        private string title = "";
         private DateTime dueDate;
-        private string description;
+        private string description = "";
         readonly private DateTime createTime;//can't be changed.
-        private string status;
+        private string status = "";
         
 
         public TaskBL(string title,string description,DateTime dueDate,long id)
@@ -24,10 +24,10 @@ namespace Kanban_BackEnd.BusinessLayer
             this._description = description;
             this._status = "backlog";
             this._dueDate = dueDate;
-            this._id = id;
+            this.id = id;
         }
 
-        public long _id { get;}
+        public long _id { get => id; }
         public string _title
         {
             get => title;
@@ -44,8 +44,7 @@ namespace Kanban_BackEnd.BusinessLayer
             get => dueDate;
             set
             {
-                if (value == null) throw new ArgumentNullException("value");
-                dueDate = value;
+                dueDate = value;//will never be null according to c#.
             }
         }
         public string _description

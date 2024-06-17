@@ -9,9 +9,9 @@ namespace Kanban_BackEnd.BusinessLayer
 {
     internal class UserBL
     {
-        private string username;
-        private string email;
-        private string password;
+        private string username="";
+        private string email = "";
+        private string password = "";
         internal bool LoggedIn = true;
 
         

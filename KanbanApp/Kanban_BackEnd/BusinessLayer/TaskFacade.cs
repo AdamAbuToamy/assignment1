@@ -19,7 +19,7 @@ namespace Kanban_BackEnd.BusinessLayer
         {
             if (_boards.ContainsKey(boardName))
             {
-                _boards[boardName] = null;
+                //_boards[boardName] = null; cannot make null according to compilition.
                 _boards.Remove(boardName);
             }
             else throw new KeyNotFoundException($"A board with name {boardName} is not existed!");
